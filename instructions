@@ -1,0 +1,8 @@
+Write the scanner for a desk calculator that recognizes:
+
+(40 points) Integers - these can be written in octal (any integer that starts with 0), decimal, or hexadecimal (any integer that starts with 0x). The output for these should be INT.
+(40 points) Floating point values - these can be written with or without leading 0s (for example, 0.12 or .12), as well as in scientific notation (1.234568e+5 instead of 123456.789). The output for these should be FLOAT.
+(10 points) Algebraic operators: +, -, /, *, %, and =. The output for these should be, ADD, SUBTRACT, DIVIDE, MULTIPLY, MODULO, and EQUAL, respectively.
+(10 points) Six letters that can be used as variables: a, b, c, d, e, and f. The output for these should be ID.
+(10 points) Open and close parentheses: ( and ). The output for these should be OP and CP, respectively.
+Submit your scanner.l file that contains your solution. Due: Sunday, November 12 at 11:59 PM. You may use one or more of your three late days
