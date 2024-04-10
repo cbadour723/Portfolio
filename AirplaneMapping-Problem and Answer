@@ -1,0 +1,101 @@
+Write a program to use Map to construct a dictionary for airport code and airport city. The program should read from a text file (“activity13_input.txt”) to construct the dictionary. Each line in the text file is a pair of airport code and city separated by a TAB key. Once the file is read and the dictionary is constructed, the program should display a menu that allows user to do the following:
+
+Display all the airports/cities
+Add a new airport
+Search for an airport
+Exit
+Once the output is displayed, the program will ask user to press Enter key to continue.
+
+To add a new airport, the program will ask user to enter the airport code and city and then add it to the dictionary.
+
+To search for an airport, the program will ask user to enter an airport code and it will search and display the airport city.
+
+The sample input file looks like this:
+
+RDU       Raleigh/Durham
+
+SFO        San Francisco
+
+ORD       Chicago
+
+PGV        Pitt/Greenville
+
+Your Answer:
+package activity13;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Map {
+    public static void main(String[] args) {
+        HashMap<String,String> hm = new HashMap<String,String>(); 
+        //StringTokenizer myTokens = new StringTokenizer(null);
+        String filename = "activity13_input.txt";
+        Scanner inputStream = null;
+
+        try {
+            inputStream = new Scanner(new File(filename));
+        
+            }
+            catch (FileNotFoundException e) {
+            System.out.println("Error openning the file " + filename);
+            System.exit(1);
+            }
+            while (inputStream.hasNextLine()) {
+                String line = inputStream.nextLine();
+                String[] tokens = line.split("\t");
+                hm.put(tokens[0].trim(), tokens[1].trim());
+            }
+            inputStream.close();
+            
+            int option;
+            Scanner keyboard = new Scanner(System.in);
+            Scanner keyboard2 = new Scanner(System.in);
+            option = 0;
+            while(option!=4) {
+            System.out.println("1. Display all the airports/cities" + "\n" + 
+                    "2. add a new airport" + "\n" + 
+                    "3. search for an airport" + "\n" +
+                    "4. exit");
+            option = keyboard.nextInt();
+            switch(option) {
+            case 1:
+                for (Entry<String, String> me :
+                     hm.entrySet()) {
+          
+                    // Printing keys
+                    System.out.print(me.getKey() + ":");
+                    System.out.println(me.getValue());
+                }
+                break;
+            case 2:
+                String airport, city;
+                System.out.println("Enter a new airport and city");
+                hm.put(airport = keyboard.next(), city = keyboard.next());
+                break;
+            case 3:
+                System.out.println("Enter a airport to search for");
+                String airportS;
+                airportS = keyboard.next();
+                hm.get(airportS);
+                if(hm.containsKey(airportS)) {
+                    System.out.println("the map DOES contain airport" + airportS);
+                }
+                else {
+                    System.out.println("the map does NOT conatin airport" + airportS);
+                }
+            }
+            System.out.println("Press Enter to continue");
+            String enterkey = keyboard2.nextLine();
+            while(enterkey != "");
+            continue;
+    }
+    }
+
+}
