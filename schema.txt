@@ -1,0 +1,11 @@
+Schema
+
+Patient(SSN, Name, DateOfBirth, Gender, Address, PrimaryDoctorID)
+Doctor(ID, Name, Specialty)
+Prescription(PrescriptionID, Date, Quantity, DoctorID, PatientSSN)
+Drug(TradeName, Description, CompanyBrandName)
+Pharmacy(PharmacyID, Name, PhoneNumber, Address)
+PharmaceuticalCompany(BrandName, Address, PhoneNumber)
+
+
+First in each is primary key
