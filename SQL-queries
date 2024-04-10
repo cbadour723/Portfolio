@@ -1,0 +1,46 @@
+Please try to write SQL queries for the dvdrental database (check HW0 Part 3).
+
+Order customers from customer table based on first_name ascending order and last_name descending order.
+Find rental id that rental date is either 2005-05-24 or 2005-05-26
+Find total number of payment transactions of each staff using on payment table.
+List the full names of all customers whose address does not include the keyword “Santiago”
+List the store_id of the stores with more than 200 customers.
+Find all rentals that did not have the customer id as 1 or 2.
+
+
+1. Order customers from customer table based on first_name ascending order and last_name descending order.
+
+SELECT first_name, last_name
+FROM customer
+ORDER BY first_name ASC, last_name DESC;
+
+2. Find rental id that rental date is either 2005-05-24 or 2005-05-26
+
+SELECT rental_id
+FROM rental
+WHERE rental_date IN ('2005-05-24', '2005-05-26');
+
+3. Find total number of payment transactions of each staff using on payment table.
+
+SELECT staff_id, COUNT(*) AS total_payments
+FROM payment
+GROUP BY staff_id;
+
+4.List the full names of all customers whose address does not include the keyword “Santiago”
+
+SELECT first_name, last_name
+FROM customer
+WHERE address NOT LIKE '%Santiago%';
+
+5. List the store_id of the stores with more than 200 customers.
+
+SELECT store_id, COUNT(*) AS total_customers
+FROM customer
+GROUP BY store_id
+HAVING COUNT(*) > 200;
+
+6. Find all rentals that did not have the customer id as 1 or 2.
+
+SELECT *
+FROM rental
+WHERE customer_id NOT IN (1, 2);
