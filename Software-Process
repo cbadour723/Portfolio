@@ -1,0 +1,37 @@
+This assignment was locked Sep 19, 2023 at 11:59pm.
+Submit your project planning 
+
+First Deliverable (Project Management Planning): Due September 19, 2023 (10%)
+
+Project scope, features, technologies, tools.
+
+Task breakdown among team member and indicating a point of contact (team-organizer).
+
+Project cost and effort estimation using COCOMO model.
+
+Project scheduling using Gantt Chart, and risk management plan.
+
+
+Second Deliverable (SRS & Client-side Prototype): Due October 8, 2023 (20%)
+• Software Requirement Specification (SRS) using the IEEE standard template.
+• Prototype of different user interfaces, to receive client’s feedback. Ideally, a web pages as UI.
+• Weekly group meeting activity reports.
+• Class presentation (power point) on Thursday October 12 in class. 
+
+
+Third Deliverable (SDS & Back-end Prototype): Due November 1, 2023 (30%)
+See the complete instructions for SDS preparation in Canvas RESOURCES (The SDS class presentations will be on Thursday November 2nd)
+Software Design Specification using IEEE standard template.
+Use Confluence Collaboration Software Tool to develop your SDS document using the IEEE Template sections. Use the video tutorial to learn how to use it.
+Prototype of the back-end computation application to communicate basic application’s functionality with the client-side. 
+Weekly group meeting activity reports.
+
+
+Fourth Deliverable (Working App + Test Suite + Manual): Due November 28, 2023 (35%)
+Source code of the software project.
+Detailed test suites for different features.
+User manual including the installation steps, screenshots and process flow.
+Approximation of the hours spent on each part of the project, in particular they should be divided into client-side and back-end side tasks.
+Weekly group meeting activity reports.
+Final project demonstration and presentation as a group, and individually (Tues Nov. 28). PPT Slides Submission via MS Teams.
+Instructions for contents of presentation, demo and test suite will be posted in the Canvas.
